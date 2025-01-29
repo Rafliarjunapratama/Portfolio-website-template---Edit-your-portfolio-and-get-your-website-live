@@ -1,0 +1,408 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#landing {
+    background-color: #F9E6F0;
+    height: 100vh;
+    
+    display: flex;
+    font-family: "Epilogue", serif;
+}
+
+/* Sembunyikan toggle button di desktop */
+
+
+#landing .nav {
+    z-index: 1;
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+#landing .nav ul {
+    display: flex;
+}
+
+#landing .nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+#landing .nav ul li a {
+    padding: 6px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+#landing .nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#landing .nav h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 6px 15px;
+    margin-left: 10px;
+}
+
+#landing .about {
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    width: 800px;
+}
+
+#landing .about p {
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+#landing .about h6 {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#landing .about img {
+    margin-bottom: 30px;
+    margin-right: 70px;
+}
+
+#pengalaman {
+    height: 100vh;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Epilogue", serif;
+}
+
+#pengalaman .when {
+    line-height: 36px;
+    font-size: 29px;
+    text-align: left;
+    width: 880px;
+    margin: 100px auto;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#pengalaman .being {
+    line-height: 26px;
+    font-size: 16px;
+    text-align: left;
+    width: 880px;
+    margin: 0 auto 100px;
+}
+
+#pengalaman .being .human {
+    background-color: #009379;
+    color: #F6DCE9;
+    padding: 8px 0;
+}
+
+#pengalaman .being .asli {
+    padding: 8px 0;
+}
+
+#contact {
+    height: 100vh;
+    background-color: #fff;
+    font-family: "Epilogue", serif;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    line-height: 27px;
+}
+
+#contact .column1 {
+    text-align: left;
+    margin: 80px auto;
+    width: 30%;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#contact .column1 h1 {
+    margin-bottom: 80px;
+}
+
+#contact .column2 {
+    text-align: left;
+    margin: 80px auto;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .input {
+    background-color: #F3F3F3;
+    width: 530px;
+    height: 69px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 30px;
+    color: #2D2D2D;
+}
+
+#contact .textarea {
+    background-color: #F3F3F3;
+    width: 530px;
+    height: 231px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 30px;
+}
+
+#contact input:focus, #contact .textarea:focus {
+    outline: none;
+}
+
+#contact .button-submit {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 0px;
+}
+
+#contact .button-submit:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 2px 0 5px black;
+}
+
+hr {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    
+}
+
+.toggle-btn .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+
+@media only screen and (max-width: 760px) {
+    #landing {
+        width: 790px;
+        height: 150vh;
+    }
+
+    /* Media query untuk mobile */
+
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+    #navMenu li {
+        z-index: -1;
+        margin: 15px 0;
+    }
+    
+    
+    #navMenu {
+        position: absolute;
+        top: -145px;
+        left: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.6s;
+        box-shadow: 0 10px 7px rgba(0, 0, 0, 0.05);
+        z-index: -1;
+        
+    }
+
+   
+    #navMenu.active {
+        z-index: -1;
+        top: 45px;
+    }
+    
+    
+    #landing .nav {
+        position: fixed;
+        justify-content: left;
+        gap: 20px;
+        z-index: 1;
+    }
+
+    #landing .nav ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #landing .about {
+        margin-top: 100px;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+        margin-left: -100px;
+    }
+
+    #landing .about p {
+        font-size: 15px;
+    }
+    
+    #landing .about .bio {
+        margin-left: 270px;
+        margin-top: 80px;
+        padding-left: 95px;
+    }
+
+    #pengalaman {
+        height: 200vh;
+        flex-direction: column;
+    }
+    #pengalaman .being{
+        margin: 30px;
+        line-height: 26px;
+        width: 760px;
+    }
+
+    #pengalaman .when{
+        width: 760px;
+        margin: 30px;
+        line-height: 36px;
+    }
+    #pengalaman p{
+        letter-spacing: 5px;
+    }
+
+    #contact{
+        flex-direction: column;
+        line-height: 27px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-self: flex-start;
+    }
+    #contact .column1{
+     margin-left: 100px;
+     width: 760px;
+        text-align: left;
+    } 
+}
+
+@media only screen and (max-width:560px) {
+    #landing {
+        width: 100%;
+        height: auto;
+    }
+
+    #landing .about {
+        margin: 150px 20px 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #landing .about .bio {
+        margin-left: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #pengalaman {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #pengalaman .when,
+    #pengalaman .being {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 15px;
+    }
+
+    #contact {
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    #contact .column1 {
+        width: 100%;
+        margin: 30px 0;
+        padding: 0 20px;
+    }
+
+    #contact .column2 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #contact .input,
+    #contact .textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    #contact .button-submit {
+        width: 100%;
+        max-width: 200px;
+        margin: 20px auto;
+        margin-left: 0px;
+    }
+
+    #landing .nav {
+        z-index: 1;
+        padding: 10px 20px;
+    }
+
+    #landing .nav ul li {
+        margin: 5px;
+    }
+
+    #landing .nav ul li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+/* 
+###################################################################################################################
+########    Author code  :   Muhamad Rafli Arjuna Pratama                               ###########################
+########    Design Figma :   https://www.figma.com/community/file/1184894959333450190   ###########################
+###################################################################################################################
+*/
